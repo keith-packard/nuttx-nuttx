@@ -33,7 +33,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-WD=`test -d ${0%/*} && cd ${0%/*}; pwd`
+WD=`test -d ${0%/*} && cd ${0%/*} > /dev/null; pwd`
 TOPDIR="${WD}/.."
 USAGE="
 
