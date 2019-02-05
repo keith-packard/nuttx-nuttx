@@ -108,4 +108,16 @@ config MEMCPY_VIK
 		Select this option for improved performance at the expense of increased
 		size. See licensing information in the top-level COPYING file.
 
+config NEWLIB_PRINTF
+	bool "Use newlib printf code"
+	default n
+	---help---
+
+		Replace printf code with version from
+		newlib-nano. This version provides improved floating
+		point output support, including 'g' mode as well as
+		making the default 'f' format include digits past the
+		decimal point. However, it does not include 'long long'
+		support.
+
 endmenu #Standard C I/O
