@@ -102,10 +102,10 @@ static inline int isascii(int c)
 #if defined(CONFIG_HAVE_INLINE) || defined(__cplusplus)
 static inline int isprint(int c)
 {
-  return c >= 0x20 && c < 0x7f;
+  return c >= 0x20 && c < 0xff;
 }
 #else
-#  define isprint(c)   ((c) >= 0x20 && (c) < 0x7f)
+#  define isprint(c)   ((c) >= 0x20 && (c) < 0xff)
 #endif
 
 /****************************************************************************
